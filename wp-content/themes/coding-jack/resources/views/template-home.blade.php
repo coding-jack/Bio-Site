@@ -6,14 +6,14 @@
 
 @section('content')
   @while(have_posts()) @php(the_post())
-    <div class="row hero align-items-center text-white">
+    <div class="row hero align-items-center">
       <div class="container">
         <div class="row align-items-center text-center">
           <div class="col">
-            <h1 class="font-weight-700">Jackson Kaufman</h1>
-            <h2 class="h4 font-weight-300">Front End Web Developer</h2>
-            <h3 class="h5 font-weight-300 mb-4">Denver, Colorado</h3>
-            <a class="h5 font-weight-300" href="{{ home_url('/bio') }}">Bio</a>
+            <h1 class="font-weight-700">{{ get_field('name') }}</h1>
+            <h2 class="h4 font-weight-300">{{ get_field('job_title') }}</h2>
+            <h3 class="h5 font-weight-300 mb-4">{{ get_field('location') }}</h3>
+            <a class="h5 font-weight-500" href="{{ get_field('page_link') }}">{{ get_field('page_link_text') }}</a>
           </div>
           <div class="col">
             <ul class="list-unstyled">
