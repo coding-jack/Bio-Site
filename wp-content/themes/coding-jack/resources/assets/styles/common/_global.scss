@@ -1,6 +1,8 @@
 .hero {
-  @include media-breakpoint-up(sm) {
-    height: 100vh;
+  @include media-breakpoint-up(lg) {
+    @media (min-height:800px) {
+      height: 100vh;
+    }
   }
 }
 
@@ -10,8 +12,10 @@ body {
   color: $c-white;
   overflow: scroll;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(lg) {
+    @media (min-height:800px) {
     overflow: hidden;
+    }
   }
   &.skills {
     background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
