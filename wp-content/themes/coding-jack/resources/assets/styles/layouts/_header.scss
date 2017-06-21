@@ -5,5 +5,13 @@
   @extend .nav-link;
 }
 header.banner {
-  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 15px;
+  right: 15px;
+}
+body.admin-bar {
+  header.banner {
+    top: 50px;
+  }
 }
